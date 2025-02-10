@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/no-unescaped-entities */
 import React, { useContext, useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -17,7 +19,7 @@ import {
   FaArrowLeft,
 } from "react-icons/fa";
 import { toast } from "react-toastify";
-import Input from "./input";
+// import Input from "./input";
 import CartContext from "../contexts/cartcontext";
 
 const SingleProduct = () => {
@@ -147,23 +149,22 @@ const SingleProduct = () => {
     ],
   };
 
+  
   const handleThumbnailClick = (index) => {
-    setCurrentImageIndex(index); // Change the main image in the carousel
+    setCurrentImageIndex(index); 
   };
 
   const handleReview = () => {
     setshow(!show);
   };
 
-  // if (!ratingData || reviews.length === 0) {
-  //     return <div>Loading...</div>;
-  // }
+
   const handleAddToWishlist = async (productId) => {
     if (!token) {
       toast.info("Please log in first to add products to the wishlist.");
       alert("Please log in first to add products to the wishlist.");
       navigate("/login");
-      return; // Exit the function if no token is present
+      return; 
     }
 
     try {
@@ -181,7 +182,7 @@ const SingleProduct = () => {
           title: product?.name || "Product Title",
           url: window.location.href,
         });
-        // alert("URL shared successfully!");
+       
       } catch (error) {
         console.error("Error sharing:", error);
         alert("Failed to share the URL.");
@@ -226,20 +227,6 @@ const SingleProduct = () => {
                   </Slider>
                 </div>
 
-                {/* Thumbnail Images */}
-                {/* {product.images && product.images.length > 1 && (
-                                    <div className="flex justify-center gap-4 mb-4">
-                                        {product.images.map((image, index) => (
-                                            <img
-                                                key={index}
-                                                src={image}
-                                                alt={`Thumbnail ${index + 1}`}
-                                                className={`w-16 h-16 object-contain rounded-lg cursor-pointer ${currentImageIndex === index ? 'border-blue-500' : 'border-gray-300'}`}
-                                                onClick={() => handleThumbnailClick(index)}
-                                            />
-                                        ))}
-                                    </div>
-                                )} */}
               </>
             ) : (
               <div className="h-72 flex justify-center items-center bg-gray-200 rounded-lg">
@@ -248,18 +235,18 @@ const SingleProduct = () => {
             )}
           </div>
 
-          {/* Product Details */}
+          
           <div className="relative lg:w-6/12 flex flex-col justify-between rounded-lg h-96 p-6">
-            {/* Share Button at Top-Left */}
+          
             <button
               onClick={handleShare}
               className="absolute top-4 right-4 flex items-center gap-2 bg-black text-white py-2 px-3 rounded-lg hover:bg-white hover:text-black border border-black transition duration-300"
             >
-              <FaShareAlt /> {/* Share Icon */}
+              <FaShareAlt /> 
               Share
             </button>
 
-            {/* Product Title, Price, and Rating */}
+            
             <div>
               <div className="mb-6">
                 <h2 className="text-4xl font-semibold mb-2">
@@ -375,9 +362,9 @@ const SingleProduct = () => {
             </p>
           </div>
         </div>
-        {/* Reviews */}
+       
         <div className="p-8 bg-gray-50 grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Rating Breakdown */}
+          
           <div>
             <h2 className="text-2xl font-bold mb-4">Customer Reviews</h2>
             <div className="flex items-center">
@@ -388,27 +375,9 @@ const SingleProduct = () => {
                 <FaStar className="text-yellow-400" />
                 <FaStarHalfAlt className="text-yellow-400" />
               </div>
-              {/* <span className="ml-2 text-lg font-semibold">
-                                {ratingData.average} based on {ratingData.totalReviews} reviews
-                            </span> */}
             </div>
 
-            {/* Rating Bars */}
-            {/* {ratingData.ratings.map((rating, index) => (
-                            <div key={index} className="flex items-center mt-2">
-                                <FaStar className="text-yellow-400" />
-                                <span className="ml-2 text-sm font-medium">{rating.stars}</span>
-                                <div className="w-full h-2 bg-gray-200 rounded-full mx-4">
-                                    <div
-                                        className="h-full bg-yellow-400 rounded-full"
-                                        style={{ width: `${rating.percentage}%` }}
-                                    ></div>
-                                </div>
-                                <span className="text-sm font-medium">{rating.percentage}%</span>
-                            </div>
-                        ))} */}
 
-            {/* Write a review button */}
             <div className="mt-6">
               <h3 className="font-bold">Share your thoughts</h3>
               <p className="text-gray-500 text-sm">

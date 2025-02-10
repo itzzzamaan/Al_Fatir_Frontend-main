@@ -12,6 +12,7 @@ import WhatsappBtn from "./WhatsappBtn";
 
 
 
+
 const Home = () => {
   return (
     <div className="home  text-gray-800 overflow-x-hidden overflow-y-auto">
@@ -27,7 +28,9 @@ const Home = () => {
       <HomeBestSellers />
       <ProDuctDetails />
       <Reviews />
+      
       <WhatsappBtn />
+
 
       <Footer />
 

@@ -1,11 +1,11 @@
 import  { useState } from 'react';
-import axios from '../utils/axios'; // Adjust the import path as needed
+import axios from '../utils/axios'; 
 import { useNavigate, useParams } from 'react-router-dom';
 
 import { toast } from 'react-toastify';
 
 const UpdatePassword = () => {
-  const { token } = useParams(); // Extract the token from the URL
+  const { token } = useParams(); 
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const navigate = useNavigate();
@@ -28,7 +28,7 @@ const UpdatePassword = () => {
       toast.success('Your password has been updated successfully!');
       setPassword('');
       setConfirmPassword('');
-      navigate('/'); // Redirect to home after successful password update
+      navigate('/'); 
     } catch (error) {
       console.error('Error updating password:', error);
       toast.error(error.response?.data?.message || 'Something went wrong. Please try again.');

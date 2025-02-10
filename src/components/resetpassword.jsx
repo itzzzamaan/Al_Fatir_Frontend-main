@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import axios from '../utils/axios'; // Adjust the path as needed
+import { useState } from 'react';
+import axios from '../utils/axios'; 
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 

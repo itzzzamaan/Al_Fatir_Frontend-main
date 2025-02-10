@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaEye, FaEyeSlash, FaArrowLeft } from "react-icons/fa";
 import { toast } from "react-hot-toast";
 import axios from "axios";

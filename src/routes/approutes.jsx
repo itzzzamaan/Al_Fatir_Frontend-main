@@ -15,12 +15,12 @@ import SingleProduct from "../components/SingleProduct";
 import ViewCart from "../components/viewcart";
 import CartDrawer from '../components/CartDrawer';
 import Orders_details from "../components/Orders_details";
-import Customers from "../components/customers";
-import Reports from "../components/Reports";
+// import Customers from "../components/customers";
+// import Reports from "../components/Reports";
 import Search from "../components/Search";
 import Wishlist from "../components/wishlist";
-import Productsfortest from "../components/Productsfortest";
-import Profile from "../components/profile";
+// import Productsfortest from "../components/Productsfortest";
+// import Profile from "../components/profile";
 import Checkout from "../components/checkout";
 import Order from "../components/order.jsx";
 import CreateOrder from "../components/CreateOrder";
@@ -71,7 +71,7 @@ const AppRoutes = () => {
         <Route path="/resetpassword" element={<ResetPassword />} />
         <Route path="/productspage" element={<ProductsPage />} />
         <Route path="/productsforuser" element={<Productsforuser />} />
-        <Route path="/productsfortest" element={<Productsfortest />} />
+        {/* <Route path="/productsfortest" element={<Productsfortest />} /> */}
         <Route path="/updateproduct/:productId" element={<Updateproduct />} />
         <Route path="/singleproduct/:id" element={<SingleProduct />} />
         <Route path="/shopwoody" element={<Shopwoody />} />
@@ -97,11 +97,11 @@ const AppRoutes = () => {
         <Route path="/CartDrawer" element={<CartDrawer />} />
         <Route path="/order_history/Details/:orderId" element={<Orders_details/>} />
         <Route path="/order_history" element={<Order />} />
-        <Route path="/customers" element={<Customers />} />
-        <Route path="/reports" element={<Reports />} />
+        {/* <Route path="/customers" element={<Customers />} /> */}
+        {/* <Route path="/reports" element={<Reports />} /> */}
         <Route path="/search" element={<Search />} />
         <Route path="/wishlist" element={<Wishlist />} />
-        <Route path="/profile" element={<Profile />} />
+        {/* <Route path="/profile" element={<Profile />} /> */}
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/createorder" element={<CreateOrder />} />
         <Route path="/userorder" element={<UserOrders />} />
